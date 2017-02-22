@@ -11,13 +11,12 @@
     $scope.messageStyle = {};
     $scope.check = function (){
       var count = countOfItems($scope.menuList);
-        $scope.messageStyle = {'color':'green',
-                               'border-style':'solid',
-                               'border-color':'green'};
+
+      $scope.messageStyle = {'color':'green'};
+      $scope.inputStyle = {'border-style':'solid', 'border-color':'green'};
       if(count === 0){
-        $scope.messageStyle = {'color':'red',
-                               'border-style':'solid',
-                               'border-color':'red'};
+        $scope.messageStyle = {'color':'red'};
+        $scope.inputStyle = {'border-style':'solid', 'border-color':'red'};
         $scope.message = "Please enter data first";
       } else if(count <= 3){
         $scope.message = "Enjoy!";
